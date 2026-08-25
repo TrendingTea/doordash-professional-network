@@ -1,4 +1,5 @@
 # Architecture
+
 ```text
 Order / Pickup Event
       ↓
@@ -11,5 +12,3 @@ Dasher Professional Profile
 Customer Professional Card
       ↓
 Opportunity / Career Layer
-```
-POS means **Point of Sale**.
