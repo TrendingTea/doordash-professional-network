@@ -1,0 +1,7 @@
+{
+  "type": "synthetic",
+  "merchant_case_study": "McDonald's",
+  "locations": 50,
+  "deliveries": 1000,
+  "note": "Demonstration data only. No real McDonald's or DoorDash operational data."
+}
