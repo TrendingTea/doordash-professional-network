@@ -1,4 +1,3 @@
-@'
 :root {
   font-family: Inter, Segoe UI, system-ui, sans-serif;
   color: #191919;
@@ -315,306 +314,28 @@ small {
     font-size: 2.2rem;
   }
 }
-'@ | Set-Content .\static\app.css
-'@ | Set-Content .\static\app.css
-/* Full-page map background */
-html, body {
-min-height: 100%;
-}
-
-body {
-background-image:
-linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
-url("map-background.png");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-}
-
-/* Full-page navigation/map background */
-html,
-body {
-min-height: 100%;
-}
-
-body {
-background-image:
-linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
-url("/static/map-background.png") !important;
-
-background-size: cover !important;
-background-position: center center !important;
-background-repeat: no-repeat !important;
-background-attachment: fixed !important;
-}
-
-/* =========================================================
-FULL-PAGE GPS MAP CANVAS
-
-html {
-min-height: 100%;
-background: transparent !important;
-}
-
-body {
-min-height: 100vh;
-margin: 0;
-position: relative;
-background: transparent !important;
-}
-
-/* Fixed map canvas behind the entire application */
-body::before {
-content: "";
-position: fixed;
-inset: 0;
-width: 100vw;
-height: 100vh;
-
-background-image:
-linear-gradient(
-rgba(245, 242, 235, 0.28),
-rgba(245, 242, 235, 0.28)
-),
-url("/static/map-background.png");
-
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-
-z-index: -2;
-pointer-events: none;
-}
-
-/* Ensure the primary page wrapper does NOT paint white over the map */
-.page,
-.ht-container,
-main {
-background: rgba(250, 248, 242, 0.72) !important;
-}
-
-/* Cards remain readable but allow map texture through */
-.ht-notice,
-.hero,
-section {
-background-color: transparent;
-}
-
-/* Individual cards */
-.hero-stats > *,
-.cards > *,
-.card {
-backdrop-filter: blur(7px);
--webkit-backdrop-filter: blur(7px);
-}
 
 
 /* =========================================================
-FINAL GPS MAP CANVAS OVERRIDE
-
-html {
-min-height: 100%;
-background: transparent !important;
-}
-
-body {
-min-height: 100vh;
-
-background-image:
-linear-gradient(
-rgba(255,255,255,0.28),
-rgba(255,255,255,0.28)
-),
-url("/static/map-background.png") !important;
-
-background-size: cover !important;
-background-position: center center !important;
-background-repeat: no-repeat !important;
-background-attachment: fixed !important;
-}
-
-/* Remove the solid white canvas */
-.ht-container,
-.page,
-main,
-.hero,
-section {
-background-color: transparent !important;
-background-image: none !important;
-}
-
-/* Keep presentation content readable over the GPS map */
-.ht-notice {
-background: rgba(255,255,255,0.82) !important;
-backdrop-filter: blur(5px);
-}
-
-
-/* =========================================================
-DESIGN SYSTEM: GPS CANVAS
-
-:root {
---ds-gps-background-image: url("/static/design-system/images/gps-map-background.png");
---ds-gps-overlay: rgba(255,255,255,0.14);
---ds-page-surface: rgba(248,246,240,0.88);
---ds-card-surface: rgba(255,255,255,0.84);
---ds-surface-blur: 6px;
-}
-
-.ds-gps-canvas {
-min-height: 100vh;
-background-image:
-linear-gradient(
-var(--ds-gps-overlay),
-var(--ds-gps-overlay)
-),
-var(--ds-gps-background-image);
-
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-}
-
-.ds-page-surface {
-background: var(--ds-page-surface);
-backdrop-filter: blur(var(--ds-surface-blur));
--webkit-backdrop-filter: blur(var(--ds-surface-blur));
-}
-
-.ds-card-surface {
-background: var(--ds-card-surface);
-backdrop-filter: blur(var(--ds-surface-blur));
--webkit-backdrop-filter: blur(var(--ds-surface-blur));
-}
-
-
-/* Full-page navigation map background */
-html, body {
-    min-height: 100%;
-}
-
-body {
-    background-image:
-        linear-gradient(rgba(8, 12, 18, 0.72), rgba(8, 12, 18, 0.72)),
-        url("/static/images/map-background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* FINAL MAP BACKGROUND OVERRIDE */
-html,
-body {
-    min-height: 100% !important;
-}
-
-body {
-    margin: 0 !important;
-    background: url("/static/map-background.png") center center / cover no-repeat fixed !important;
-}
-
-body::before {
-    display: none !important;
-}
-
-main,
-.wrap {
-    background: transparent !important;
-}
-
-/* =========================================================
-   ABSOLUTE FINAL PAGE BACKGROUND
+   MAP PAGE CANVAS
    ========================================================= */
 
 html {
     min-height: 100%;
-    background: #111 !important;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.18)
+        ),
+        url("/static/map-background.png")
+        center center / cover
+        no-repeat fixed !important;
 }
 
 body {
-    min-height: 100vh !important;
-    margin: 0 !important;
-    position: relative !important;
-    isolation: isolate !important;
-
+    min-height: 100vh;
+    margin: 0;
     background: transparent !important;
-    background-image: none !important;
-}
-
-/* Dedicated full-screen PNG layer */
-body::before {
-    content: "" !important;
-    display: block !important;
-
-    position: fixed !important;
-    inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-
-    background-image: url("/static/map-background.png") !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-
-    opacity: 1 !important;
-
-    z-index: 0 !important;
-    pointer-events: none !important;
-}
-
-/* Put ALL webpage content above the map */
-body > * {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-/* Do not allow the main page container to hide the map */
-main,
-.wrap,
-.page,
-.ht-container,
-.hero-section,
-.hero,
-section {
-    background-color: transparent !important;
-    background-image: none !important;
-}
-
-/* Readable glass/card surfaces */
-.notice,
-.proposal-card,
-.card,
-.pilot-card,
-.thesis-bar,
-.metric,
-.quick-stats > div,
-.author-card {
-    position: relative !important;
-    background: rgba(255, 255, 255, 0.90) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-}
-
-/* Preserve dark design-system cards where appropriate */
-.author-card,
-.quick-stats > div {
-    background: rgba(25, 25, 25, 0.92) !important;
-}
-
-
-/* MAP BACKGROUND */
-html,
-body {
-    min-height: 100vh !important;
-    margin: 0 !important;
-    background-image: url("/static/map-background.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
 }
 
 .wrap,
@@ -622,9 +343,14 @@ main {
     background: transparent !important;
 }
 
+/* Existing design-system cards remain above the map */
 .notice,
 .proposal-card,
 .thesis-bar,
+.card,
+.metric,
+.pilot-card,
+.author-card,
 .quick-stats > div {
     position: relative;
     z-index: 1;
