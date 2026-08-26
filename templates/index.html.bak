@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/static/app.css">
 </head>
 
-<body class="ds-gps-canvas">
+<body>
   <main class="wrap">
 
     <div class="notice">
@@ -70,5 +70,3 @@
   </main>
 </body>
 </html>
-
-

@@ -315,4 +315,198 @@ small {
     font-size: 2.2rem;
   }
 }
+<<<<<<< HEAD
 '@ | Set-Content .\static\app.css
+=======
+'@ | Set-Content .\static\app.css
+/* Full-page map background */
+html, body {
+min-height: 100%;
+}
+
+body {
+background-image:
+linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
+url("map-background.png");
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+/* Full-page navigation/map background */
+html,
+body {
+min-height: 100%;
+}
+
+body {
+background-image:
+linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
+url("/static/map-background.png") !important;
+
+background-size: cover !important;
+background-position: center center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed !important;
+}
+
+/* =========================================================
+FULL-PAGE GPS MAP CANVAS
+========================================================= */
+
+html {
+min-height: 100%;
+background: transparent !important;
+}
+
+body {
+min-height: 100vh;
+margin: 0;
+position: relative;
+background: transparent !important;
+}
+
+/* Fixed map canvas behind the entire application */
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+width: 100vw;
+height: 100vh;
+
+background-image:
+linear-gradient(
+rgba(245, 242, 235, 0.28),
+rgba(245, 242, 235, 0.28)
+),
+url("/static/map-background.png");
+
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+
+z-index: -2;
+pointer-events: none;
+}
+
+/* Ensure the primary page wrapper does NOT paint white over the map */
+.page,
+.ht-container,
+main {
+background: rgba(250, 248, 242, 0.72) !important;
+}
+
+/* Cards remain readable but allow map texture through */
+.ht-notice,
+.hero,
+section {
+background-color: transparent;
+}
+
+/* Individual cards */
+.hero-stats > *,
+.cards > *,
+.card {
+backdrop-filter: blur(7px);
+-webkit-backdrop-filter: blur(7px);
+}
+
+
+/* =========================================================
+FINAL GPS MAP CANVAS OVERRIDE
+========================================================= */
+
+html {
+min-height: 100%;
+background: transparent !important;
+}
+
+body {
+min-height: 100vh;
+
+background-image:
+linear-gradient(
+rgba(255,255,255,0.28),
+rgba(255,255,255,0.28)
+),
+url("/static/map-background.png") !important;
+
+background-size: cover !important;
+background-position: center center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed !important;
+}
+
+/* Remove the solid white canvas */
+.ht-container,
+.page,
+main,
+.hero,
+section {
+background-color: transparent !important;
+background-image: none !important;
+}
+
+/* Keep presentation content readable over the GPS map */
+.ht-notice {
+background: rgba(255,255,255,0.82) !important;
+backdrop-filter: blur(5px);
+}
+
+
+/* =========================================================
+DESIGN SYSTEM: GPS CANVAS
+========================================================= */
+
+:root {
+--ds-gps-background-image: url("/static/design-system/images/gps-map-background.png");
+--ds-gps-overlay: rgba(255,255,255,0.14);
+--ds-page-surface: rgba(248,246,240,0.88);
+--ds-card-surface: rgba(255,255,255,0.84);
+--ds-surface-blur: 6px;
+}
+
+.ds-gps-canvas {
+min-height: 100vh;
+background-image:
+linear-gradient(
+var(--ds-gps-overlay),
+var(--ds-gps-overlay)
+),
+var(--ds-gps-background-image);
+
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.ds-page-surface {
+background: var(--ds-page-surface);
+backdrop-filter: blur(var(--ds-surface-blur));
+-webkit-backdrop-filter: blur(var(--ds-surface-blur));
+}
+
+.ds-card-surface {
+background: var(--ds-card-surface);
+backdrop-filter: blur(var(--ds-surface-blur));
+-webkit-backdrop-filter: blur(var(--ds-surface-blur));
+}
+
+
+/* Full-page navigation map background */
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-image:
+        linear-gradient(rgba(8, 12, 18, 0.72), rgba(8, 12, 18, 0.72)),
+        url("/static/images/map-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+>>>>>>> c13fa85 (Finalize DoorDash professional network presentation with map background)
