@@ -359,49 +359,11 @@ main {
 }
 
 
+
 /* Hero text card */
-.hero-section {
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 20px;
-    padding: 32px !important;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
-    margin-bottom: 24px;
-}
-
-
 .hero-text-card {
-    background: rgba(255, 255, 255, 0.94);
-    border-radius: 18px;
-    padding: 30px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-
-.hero-text-card {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.58) !important;
-    padding: 10px 14px 14px !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
-
-.hero-text-card .eyebrow,
-.hero-text-card h1,
-.hero-text-card .lede {
-    background: rgba(255, 255, 255, 0.42);
-    width: fit-content;
-    max-width: 100%;
-}
-
-.hero-text-card .eyebrow {
-    margin: 0 0 8px 0;
-}
-
-.hero-text-card h1 {
-    margin: 0 0 8px 0;
-}
-
-.hero-text-card .lede {
-    margin: 0;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 24px;
+    border-radius: 12px;
 }
 
