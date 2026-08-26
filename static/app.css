@@ -367,3 +367,11 @@ main {
     border-radius: 12px;
 }
 
+
+.hero-text-card {
+    background-color: white !important;
+    border: 2px solid #dddddd !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+}
+
