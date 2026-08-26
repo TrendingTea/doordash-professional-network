@@ -504,3 +504,23 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+/* FINAL MAP BACKGROUND OVERRIDE */
+html,
+body {
+    min-height: 100% !important;
+}
+
+body {
+    margin: 0 !important;
+    background: url("/static/map-background.png") center center / cover no-repeat fixed !important;
+}
+
+body::before {
+    display: none !important;
+}
+
+main,
+.wrap {
+    background: transparent !important;
+}
