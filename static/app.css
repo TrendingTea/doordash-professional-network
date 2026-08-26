@@ -15,9 +15,11 @@
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top right, #fff3f1 0, transparent 32rem),
-    #f7f7f7;
+  background-image: url("/static/map-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrap {
