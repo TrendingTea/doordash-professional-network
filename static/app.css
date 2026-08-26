@@ -358,3 +358,13 @@ main {
     z-index: 1;
 }
 
+
+/* Hero text card */
+.hero-section {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    padding: 32px !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    margin-bottom: 24px;
+}
+
