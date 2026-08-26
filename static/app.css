@@ -524,3 +524,83 @@ main,
 .wrap {
     background: transparent !important;
 }
+
+/* =========================================================
+   ABSOLUTE FINAL PAGE BACKGROUND
+   ========================================================= */
+
+html {
+    min-height: 100%;
+    background: #111 !important;
+}
+
+body {
+    min-height: 100vh !important;
+    margin: 0 !important;
+    position: relative !important;
+    isolation: isolate !important;
+
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* Dedicated full-screen PNG layer */
+body::before {
+    content: "" !important;
+    display: block !important;
+
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+
+    background-image: url("/static/map-background.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    opacity: 1 !important;
+
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Put ALL webpage content above the map */
+body > * {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Do not allow the main page container to hide the map */
+main,
+.wrap,
+.page,
+.ht-container,
+.hero-section,
+.hero,
+section {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Readable glass/card surfaces */
+.notice,
+.proposal-card,
+.card,
+.pilot-card,
+.thesis-bar,
+.metric,
+.quick-stats > div,
+.author-card {
+    position: relative !important;
+    background: rgba(255, 255, 255, 0.90) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Preserve dark design-system cards where appropriate */
+.author-card,
+.quick-stats > div {
+    background: rgba(25, 25, 25, 0.92) !important;
+}
+
