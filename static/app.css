@@ -604,3 +604,29 @@ section {
     background: rgba(25, 25, 25, 0.92) !important;
 }
 
+
+/* MAP BACKGROUND */
+html,
+body {
+    min-height: 100vh !important;
+    margin: 0 !important;
+    background-image: url("/static/map-background.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+.wrap,
+main {
+    background: transparent !important;
+}
+
+.notice,
+.proposal-card,
+.thesis-bar,
+.quick-stats > div {
+    position: relative;
+    z-index: 1;
+}
+
